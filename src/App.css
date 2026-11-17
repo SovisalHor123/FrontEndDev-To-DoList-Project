@@ -1,5 +1,0 @@
-.sidebar-menu ul {
-  display: flex;       /* Forces the <li> items side-by-side */
-  list-style: none;    /* Removes bullet points */
-  gap: 10px;
-}

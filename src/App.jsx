@@ -1,38 +1,28 @@
-import { useState } from 'react'
+
 import './App.css'
 import { AuthProvider } from './context/AuthContext'
 import { LoginPage } from './pages/Login'
 
+import { Routes, Route } from "react-router-dom";
+import Layout from './component/Layout/Layout';
+import Dashboard from "./pages/Dashboard";
+import Tasks from "./pages/Task";
+import EditTask from "./pages/EditTask";
+import Calendar from "./pages/Calendar";
+import Settings from "./pages/Settings";
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-
-      <LoginPage/>
-
-      
-      {/* <aside class="sidebar">
-        <div class="sidebar-logo">
-          <h2>AppLogo</h2>
-        </div>
-        
-
-        <nav class="sidebar-menu">
-          <ul>
-            <li><a href="#" class="active">Overview</a></li>
-            <li><a href="#">Analytics</a></li>
-          </ul>
-        </nav>
-
-
-        <div class="sidebar-footer">
-          <button type="button" id="theme-toggle">Toggle Dark Mode</button>
-          <button type="button" class="btn-logout">Log Out</button>
-        </div>
-      </aside> */}
-    </>
-  )
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<Dashboard />} />
+        <Route path="tasks" element={<Tasks />} />
+        <Route path="tasks/new" element={<EditTask />} />
+        <Route path="calendar" element={<Calendar />} />
+        <Route path="settings" element={<Settings />} />
+      </Route>
+    </Routes>
+  );
 }
 
-export default App
+export default App;
