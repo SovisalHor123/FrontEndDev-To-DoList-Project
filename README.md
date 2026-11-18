@@ -4,7 +4,7 @@ A task manager built with **React + Vite** by a team of three for the Front-End 
 Create tasks with a priority, due date and category, filter them, see them on a calendar, and switch between light and dark themes.
 All data is saved in the browser with `localStorage`, so there is no backend.
 
-**Live demo:** _coming soon_ (add the Vercel/Netlify link here)
+**Live demo:** https://front-end-dev-to-do-list-project.vercel.app
 
 ## Features
 
@@ -58,7 +58,14 @@ src/
 
 ## Deployment
 
+The app is deployed on Vercel at https://front-end-dev-to-do-list-project.vercel.app and redeploys automatically on every push.
+
 `vercel.json` and `public/_redirects` send every URL to `index.html`, so refreshing a page such as `/tasks` works on Vercel and Netlify.
+
+## Docs
+
+- [Manual test checklist](docs/TEST_CHECKLIST.md)
+- [Project report (draft)](docs/REPORT.md)
 
 ## Team
 
